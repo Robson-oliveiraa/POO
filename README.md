@@ -16,4 +16,4 @@ codigo exemplo
     atleta.letter() 
 ```
 
-# tamu junto family
+# tamo junto family
