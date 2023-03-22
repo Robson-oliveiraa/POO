@@ -26,6 +26,6 @@ class Atletas:
             text(f"\033[0;33mMelhor Lançamneto da Atleta: {self.mLancaAtleta} \n")
             text(f"\033[0;33mCondicionamento Fisico da Atleta: {self.fisicoAtleta} \n")
             text(f"\033[0;33mTecnica da Atleta: {self.tecnicaAtleta} \n")
-            
+
         else:
-            text("Digite 'F' ou 'f' para atletas femininas e 'M' ou 'm' para atletas masculinos")
+            text("Digite 'F' ou 'f' para atletas femininos e 'M' ou 'm' para atletas masculinos")
