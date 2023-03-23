@@ -36,7 +36,7 @@ class athlete:
             text(f"\033[0;33m\nNome do Atleta: {self.athleteName}\n")
             text(f"\033[0;33mSexo do Atleta: {self.athleteSex} \n")
             text(f"\033[0;33mForça do Atleta: {self.strengthAthlete} \n")
-            text(f"\033[0;33mMelhor Lançamneto do Atleta: {self.bestBid} \n")
+            text(f"\033[0;33mMelhor Lançamento do Atleta: {self.bestBid} \n")
             text(f"\033[0;33mCondicionamento Fisico do Atleta: {self.physicist} \n")
             text(f"\033[0;33mTecnica do Atleta: {self.techniqueAthlete} \n")
 
