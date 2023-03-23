@@ -27,4 +27,10 @@ ex:
 ```
 
 
+### ex final do output
+<html>
+    <img src="./images/previw.png"/>
+</html>
+
+
 # tamo junto family
