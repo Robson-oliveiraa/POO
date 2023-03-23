@@ -17,7 +17,7 @@ class athlete:
         self.physicist = physicit
         self.techniqueAthlete = technique
 
-    def letter(self):
+    def latter(self):
 
         window = Tk()
 
