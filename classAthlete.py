@@ -23,7 +23,7 @@ class athlete:
 
         pastaApp = os.path.dirname(__file__)
 
-        window.title("Cartas dos atletas de atletismo")
+        window.title(self.athleteName)
         window.config(width=360, height=500)
         imgAthelete = PhotoImage(file=pastaApp+"\\images/"+self.athleteName+".png")
         labelAthelete = Label(
@@ -31,24 +31,27 @@ class athlete:
             image=imgAthelete
         )
         labelAthelete.place(x=0, y=0)
+        upperSex = self.athleteSex.upper()
 
-        if self.athleteSex == "M" or self.athleteSex == 'm':
+        if upperSex == "M" :
             text(f"\033[0;33m\nNome do Atleta: {self.athleteName}\n")
-            text(f"\033[0;33mSexo do Atleta: {self.athleteSex} \n")
+            text(f"\033[0;33mSexo do Atleta: {upperSex} \n")
             text(f"\033[0;33mForça do Atleta: {self.strengthAthlete} \n")
             text(f"\033[0;33mMelhor Lançamento do Atleta: {self.bestBid} \n")
             text(f"\033[0;33mCondicionamento Fisico do Atleta: {self.physicist} \n")
             text(f"\033[0;33mTecnica do Atleta: {self.techniqueAthlete} \n")
+            window.mainloop()
 
-        elif self.athleteSex == "F" or self.athleteSex == 'f':
+        elif upperSex == "F":
             text(f"\033[0;33m\nNome da Atleta: {self.athleteName}\n")
-            text(f"\033[0;33mSexo da Atleta: {self.athleteSex} \n")
+            text(f"\033[0;33mSexo da Atleta: {upperSex} \n")
             text(f"\033[0;33mForça da Atleta: {self.strengthAthlete} \n")
             text(f"\033[0;33mMelhor Lançamneto da Atleta: {self.bestBid} \n")
             text(f"\033[0;33mCondicionamento Fisico da Atleta: {self.physicist} \n")
             text(f"\033[0;33mTecnica da Atleta: {self.techniqueAthlete} \n")
+            window.mainloop()
 
         else:
             text("Digite 'F' ou 'f' para atletas femininos e 'M' ou 'm' para atletas masculinos")
 
-        window.mainloop()
+        
