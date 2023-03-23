@@ -16,4 +16,15 @@ codigo exemplo
     atleta.letter() 
 ```
 
+## faça o export da sua carta pelo figma, renomeie para o nome do atleta e no teu aquivo coloque no primiero parametro o mesmo nome do arquivo sem
+
+
+ex:
+```python
+    athleteAndre = athlete("andre","M","910","15,7m","510","810")
+    athleteAndre.letter() 
+
+```
+
+
 # tamo junto family

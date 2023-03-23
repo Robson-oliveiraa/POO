@@ -33,3 +33,4 @@ class athlete:
         labelAthelete.place(x=0, y=0)
 
         window.mainloop()
+
