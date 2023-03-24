@@ -11,25 +11,34 @@ cor = ""
 
 def invalid ():
     print("Erro, você inseriu algo invalido, tente novamente")
+             
+class athlete:
+    def __init__(self,name,sex,strength,bestBid,physicit,technique):
+        self.athleteName = name
+        self.athleteSex = sex
+        self.strengthAthlete = strength
+        self.bestBid = bestBid
+        self.physicist = physicit
+        self.techniqueAthlete = technique
 
-def physicalTraining ():
-    phrases = ["Light weight baby!", "Yeeeaahh Bodyy", "Uoooouuuooo", "Yeah Baby", "Ligth weigth!"]
-    print("Ok! vamos treinar físico hoje, Light weight baby!")
-    print("Vamos fazer levantamento terra")
-    liftWeight = input('Insira "levantar" para levantar o peso\nR: ')
-    i = 0
-    liftWeight = liftWeight.upper()
-    while liftWeight != "LEVANTAR":
-        liftWeight = input('Erro!!, parece que você inseriu a palavra errada tente novamente\nInsira "levantar" para levantar o peso\nR: ')
-    while liftWeight == "LEVANTAR" and i < 5:
-        print(phrases[i])
-        i+=1
+    def physicalTraining (self):
+        phrases = ["Light weight baby!", "Yeeeaahh Bodyy", "Uoooouuuooo", "Yeah Baby", "Ligth weigth!"]
+        print("Ok! vamos treinar físico hoje, Light weight baby!")
+        print("Vamos fazer levantamento terra")
         liftWeight = input('Insira "levantar" para levantar o peso\nR: ')
+        i = 0
         liftWeight = liftWeight.upper()
-        if i == 5:
-            print("Parabéns você fez 5 repetições com 120 kg")
-
-def printCard(self):
+        while liftWeight != "LEVANTAR":
+            liftWeight = input('Erro!!, parece que você inseriu a palavra errada tente novamente\nInsira "levantar" para levantar o peso\nR: ')
+        while liftWeight == "LEVANTAR" and i < 5:
+            print(phrases[i])
+            i+=1
+            liftWeight = input('Insira "levantar" para levantar o peso\nR: ')
+            liftWeight = liftWeight.upper()
+            if i == 5:
+                print("Parabéns você fez 5 repetições com 120 kg")
+        
+    def printCard(self):
         upperSex = self.athleteSex.upper()
         if upperSex == "M":
             cor = "\033[32m"
@@ -42,7 +51,7 @@ def printCard(self):
         text(f"Condicionamento Fisico do Atleta: {self.physicist} \n")
         text(f"Tecnica do Atleta: {self.techniqueAthlete} \n")
 
-def arremessar():
+    def arremessar(self):
         list = ["1","2","3","4","5","6","7","8","9","10"]
         print('Para fazer um arremesso escrava "ok"')
         choice = input("R: ")
@@ -60,53 +69,41 @@ def arremessar():
             else:
                 throw = float(throwingStrength) + 10.00
                 print(f"Parabéns você arremessou {throw} m")
-                
-def pitchTraining():
-    print("Ok, vamos treinar arremesso")
-    arremessar()
 
-def treinarParaCompetição():
-    print("Vamos treinar para a competição\nvamos fazer um treino mais pesado")
-    print("Começando com físico")
-    physicalTraining()
-    print("E agora arremesso")
-    arremessar()
+    def pitchTraining(self):
+        print("Ok, vamos treinar arremesso")
+        self.arremessar()
 
-def treinar():
-    list = ["1","2"]
-    toTrain = input('Para treinar digite "ok"\nR: ')
-    toTrain = toTrain.upper()
-    while toTrain != "OK":
-        invalid()
+    def treinarParaCompetição(self):
+        print("Vamos treinar para a competição\nvamos fazer um treino mais pesado")
+        print("Começando com físico")
+        self.physicalTraining()
+        print("E agora arremesso")
+        self.arremessar()
+
+    def treinar(self):
+        list = ["1","2"]
         toTrain = input('Para treinar digite "ok"\nR: ')
-    if toTrain == "OK":
-        typeTrain = str(input("Vamos treinar, escolha uma da opção de treino abaixo: \n[1]Físico\n[2]Arremesso\nR: "))
-        while typeTrain not in list:
+        toTrain = toTrain.upper()
+        while toTrain != "OK":
             invalid()
+            toTrain = input('Para treinar digite "ok"\nR: ')
+        if toTrain == "OK":
             typeTrain = str(input("Vamos treinar, escolha uma da opção de treino abaixo: \n[1]Físico\n[2]Arremesso\nR: "))
-        if typeTrain == "1":
-            physicalTraining()
-        elif typeTrain == "2":
-            pitchTraining()
-             
-def receberFeedback():
-    print("Agora dê um feedback para o atleta")
-    feedBack = input("R: ")
-    print("Obrigado pelo feedback ;)")
+            while typeTrain not in list:
+                invalid()
+                typeTrain = str(input("Vamos treinar, escolha uma da opção de treino abaixo: \n[1]Físico\n[2]Arremesso\nR: "))
+            if typeTrain == "1":
+                self.physicalTraining()
+            elif typeTrain == "2":
+                self.pitchTraining()
 
-             
-             
-class athlete:
-    def __init__(self,name,sex,strength,bestBid,physicit,technique):
-        self.athleteName = name
-        self.athleteSex = sex
-        self.strengthAthlete = strength
-        self.bestBid = bestBid
-        self.physicist = physicit
-        self.techniqueAthlete = technique
+    def receberFeedback(self):
+        print("Agora dê um feedback para o atleta")
+        feedBack = input("R: ")
+        print("Obrigado pelo feedback ;)")
 
     def exibirInformações(self):
-
 
         window = Tk()
 
@@ -123,20 +120,20 @@ class athlete:
         upperSex = self.athleteSex.upper()
 
         if upperSex == "M":
-            printCard(self)
-            arremessar()
-            treinar()
-            treinarParaCompetição()
-            receberFeedback()
+            self.printCard()
+            self.arremessar()
+            self.treinar()
+            self.treinarParaCompetição()
+            self.receberFeedback()
             window.mainloop()
 
 
         elif upperSex == "F":
-            printCard(self)
-            arremessar()
-            treinar()
-            treinarParaCompetição()
-            receberFeedback()
+            self.printCard()
+            self.arremessar()
+            self.treinar()
+            self.treinarParaCompetição()
+            self.receberFeedback()
             window.mainloop()
 
         else:
