@@ -90,7 +90,7 @@ def treinar():
             pitchTraining()
              
 def receberFeedback():
-    print("Agora de um feedback para o atleta")
+    print("Agora dê um feedback para o atleta")
     feedBack = input("R: ")
     print("Obrigado pelo feedback ;)")
 
