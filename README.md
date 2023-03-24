@@ -1,36 +1,9 @@
-# Trabalho estudantil sobre class e objetos
+# Trabalho estudantil sobre classes e objetos
+## 2º informática vespertino
+- ## integrantes
+    - Douglas Arthur da Silva Bento
+    - Jefferson Bruno de Sousa Marconde
+    - Robson André Reis de Oliveira
+    - Wandell da Costa Mota
 
-``Atenção utilizar a branch mais recente, ou seja a que está escrito -1 no final do nome``
-
-## Sempre faça o git pull para qualquer anteração no main, ou após merge da branch
-
-``Não merga sua branch após o termino, espera para todos terminarem e evitar conflitos e erros depois ;)``
-
-codigo exemplo
-
-```python
-    from classAthlete import athlete
-
-    #Carta (seu nome):
-    atleta = athlete("atleta","F","800","9.19m","710","590")
-    atleta.letter() 
-```
-
-## faça o export da sua carta pelo figma, renomeie para o nome do atleta e no teu aquivo coloque no primiero parametro o mesmo nome do arquivo sem
-
-
-ex:
-```python
-    athleteAndre = athlete("andre","M","910","15,7m","510","810")
-    athleteAndre.letter() 
-
-```
-
-
-### ex final do output
-<html>
-    <img src="./images/previw.png"/>
-</html>
-
-
-# tamo junto family
+# Execute o arquivo main.py

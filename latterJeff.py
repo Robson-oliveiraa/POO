@@ -1,4 +1,6 @@
-from classAthlete import athlete
+def cartaJeff():
 
-Ana = athlete("Ana", "F", "620" , "19,0 m" , "870" , "640")
-Ana.latter()
+    from classAthlete import athlete
+
+    Ana = athlete("Ana", "F", "620" , "19,0 m" , "870" , "640")
+    Ana.exibirInformações()
