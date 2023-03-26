@@ -4,4 +4,4 @@ def cartaRobson():
 
     #Carta Robson:
     Geisa = athlete("Geisa","F","800","9.19m","710","590")
-    Geisa.exibirInformações()  
+    Geisa.exibirInformacoes()  

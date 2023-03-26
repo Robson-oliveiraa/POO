@@ -103,7 +103,7 @@ class athlete:
         feedBack = input("R: ")
         print("Obrigado pelo feedback ;)")
 
-    def exibirInformações(self):
+    def exibirInformacoes(self):
 
         window = Tk()
 
