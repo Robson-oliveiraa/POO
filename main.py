@@ -5,32 +5,15 @@
 # Robson André Reis de Oliveira
 # Wandell da Costa Mota
 
-from classAthlete import athlete
+from teste import athlete
 
-def cartaDouglas():
-    athleteAndre = athlete("Andre","M","910","15,7m","510","810")
-    athleteAndre.exibirInformacoes() 
 
-def cartaExtra():
-    Beth = athlete("Beth", "f", "770", "7,52 m", "820", "650")
-    Beth.exibirInformacoes()
+athleteAndre = athlete("Andre","M",5010, 15.7 ,510, 810)
 
-def cartaJeff():
+Beth = athlete("Beth", "F", 1000, 7.52 , 820, 650)
 
-    Ana = athlete("Ana", "F", "620" , "19,0 m" , "870" , "640")
-    Ana.exibirInformacoes()
 
-def cartaRobson():
-    #Carta Robson:
-    Geisa = athlete("Geisa","F","800","9.19m","710","590")
-    Geisa.exibirInformacoes()  
 
-def cartaWandell():
-    Darlan = athlete ("Darlan", "m", "940", "16,16 m" ,"750" ,"485")
-    Darlan.exibirInformacoes()
+athleteAndre.compararCartas(Beth, "melhor lancamento", "O melhor lançamento do")
 
-cartaDouglas()
-cartaExtra()
-cartaJeff()
-cartaRobson()
-cartaWandell()
+
