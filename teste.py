@@ -15,7 +15,7 @@ class athlete:
         elif comparison == "melhorLancamento":
             comparison = self.bestBid
             comparison1 = anotherLetter.bestBid
-        elif comparison = "fisico":
+        elif comparison == "fisico":
             comparison = self.physicist
             comparison1 = anotherLetter.physicist
         
