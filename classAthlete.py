@@ -21,40 +21,36 @@ class athlete:
         self.physicist = physicit
         self.techniqueAthlete = technique
 
-    def exibirInformacoes(self):
+    def definirGanhador(self):
+        #Dica de como fazer ai em baixo, n esqueça de utilizar o self.
 
-        window = Tk()
+        print(" ") # igonra esse print, é só para n dar erro
+        # if self.comparison > self.comparison1:
+        #     print(f"{self.printAttributos} {self.athleteName} é maior que carta {self.anotherLetter.athleteName}")
+        # else:
+        #     print(f"{self.printAttributos} {self.anotherLetter.athleteName} é maior que da carta {self.athleteName}")
 
-        pastaApp = os.path.dirname(__file__)
+    def compararCartas(self, anotherLetter, comparison, printAttributos):
+        self.comparison1 = " "
+        self.comparsion = comparison
+        self.printAttributos = printAttributos
+        self.anotherLetter = anotherLetter
 
-        window.title(self.athleteName)
-        window.config(width=360, height=500)
-        imgAthelete = PhotoImage(file=pastaApp+"\\images/"+self.athleteName+".png")
-        labelAthelete = Label(
-            window,
-            image=imgAthelete
-        )
-        labelAthelete.place(x=0, y=0)
-        upperSex = self.athleteSex.upper()
+        if comparison == "forca":
+            self.comparison = self.strengthAthlete
+            self.comparison1 = anotherLetter.strengthAthlete
+        elif comparison == "melhorLancamento":
+            self.comparison = self.bestBid
+            self.comparison1 = anotherLetter.bestBid
+        elif comparison == "fisico":
+            self.comparison = self.physicist
+            self.comparison1 = anotherLetter.physicist
+        elif comparison == "tecnica":
+            self.comparison = self.techniqueAthlete
+            self.comparison1 = anotherLetter.techniqueAthlete
 
-        if upperSex == "M":
-            self.printCard()
-            self.arremessar()
-            self.treinar()
-            self.treinarParaCompetição()
-            self.receberFeedback()
-            window.mainloop()
-
-
-        elif upperSex == "F":
-            self.printCard()
-            self.arremessar()
-            self.treinar()
-            self.treinarParaCompetição()
-            self.receberFeedback()
-            window.mainloop()
-
-        else:
-            text("Digite 'F' ou 'f' para atletas femininos e 'M' ou 'm' para atletas masculinos")
+        self.definirGanhador()
+        
+        
 
         
