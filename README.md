@@ -6,4 +6,4 @@
     - Robson André Reis de Oliveira
     - Wandell da Costa Mota
 
-# Execute o arquivo main.py 
+# Execute o arquivo main.py

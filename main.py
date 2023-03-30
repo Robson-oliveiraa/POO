@@ -11,7 +11,7 @@ from classAthlete import athlete
 athleteAndre = athlete("Andre","M",50, 15.7 ,510, 810)
 
 Beth = athlete("Beth", "F", 1000, 7.52 , 820, 650)
- 
+
 
 
 athleteAndre.compararCartas(Beth, "forca", "a força de")
