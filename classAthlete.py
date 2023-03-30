@@ -34,7 +34,7 @@ class athlete:
         self.comparison1 = " "
         self.comparsion = comparison
         self.printAttributos = printAttributos
-        self.anotherLetter = anotherLetter
+        self.anotherLetter = anotherLetter 
 
         if comparison == "forca":
             self.comparison = self.strengthAthlete
