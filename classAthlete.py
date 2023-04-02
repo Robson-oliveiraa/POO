@@ -22,7 +22,7 @@ class athlete:
         self.physicist = physicit
         self.techniqueAthlete = technique
 
-    def definirGanhador(self):
+    def defineWinner(self):
 
         if self.comparison > self.comparison1:
             text(f"{self.printAttributos} {self.athleteName} é maior que carta {self.anotherLetter.athleteName}")
@@ -34,7 +34,7 @@ class athlete:
             ganhador
         )
     
-    def compararCartas(self, anotherLetter, comparison, printAttributos):
+    def compareLetter(self, anotherLetter, comparison, printAttributos):
 
         self.comparison1 = " "
         self.comparsion = comparison
@@ -58,11 +58,11 @@ class athlete:
 
         text(f"{self.athleteName} {self.athleteSex} {self.strengthAthlete} {self.physicist} {self.bestBid} {self.techniqueAthlete}")
 
-    def definirCartaExpecial(self,var,cartasDoJogador):
+    def setSpecialCard(self,var,playerCards):
 
         if var == True:
             
             text('Você tem uma carta ultra espercial')
-            cartasDoJogador.pop(0)
+            playerCards.pop(0)
             cartaEspecial = athlete('@$$$$@', '#', 999, 99.99, 999, 999)
-            cartasDoJogador.insert(0,cartaEspecial)
+            playerCards.insert(0,cartaEspecial)
