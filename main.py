@@ -40,8 +40,8 @@ def comparacao(primeiraCarta, segundaCarta):
         primeiraCarta.compararCartas(segundaCarta, "tecnica", "a")
         
 while True:
-    # idUser = random.randint(1, 3)
-    # cartaEspecial = random.randint(1, 3)
+    idUser = random.randint(1, 3)
+    cartaEspecial = random.randint(1, 3)
     jogo = 0
     printTitle("Super Trunfo Arremesso de peso")
     print("bem vindo ao nosso jogo muito legal")
