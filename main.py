@@ -41,8 +41,8 @@ def comparsion(firstLetter, secondLetter):
 #manter um loop do jogo
 while True:
     #sorteia um numero para caso seja igual a pessoa recebe uma carta especial
-    idUser = random.randint(1, 3)
-    specialLatter = random.randint(1, 3)
+    idUser = random.randint(1, 4)
+    specialLatter = random.randint(1, 4)
     #set da varivel para reiniciar o jogo
     game = 0
     printTitle("Super Trunfo Arremesso de peso")
