@@ -60,7 +60,7 @@ class athlete:
         
 
     def exibirInformacoes(self):
-        text(f"{self.athleteName} {self.athleteSex} {self.strengthAthlete} {self.bestBid} {self.physicist} {self.techniqueAthlete}")
+        text(f"{self.athleteName} {self.athleteSex} {self.strengthAthlete} {self.physicist} {self.bestBid} {self.techniqueAthlete}")
         
         
 
