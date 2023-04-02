@@ -25,7 +25,7 @@ def printTitle(title):
     print("        Hello World!         ")
     print("=============================")
     print(f"{title}                     ")
-#Comparar as cards de acordo com os attributes
+#Comparar as cards de acordo com os atributos
 def comparsion(firstLetter, secondLetter):
     if chooseAttribute == 0:
         firstLetter.compareLetter(secondLetter, "forca", "a")
@@ -38,10 +38,12 @@ def comparsion(firstLetter, secondLetter):
         
     elif chooseAttribute == 3:
         firstLetter.compareLetter(secondLetter, "tecnica", "a")
-        
+#manter um loop do jogo
 while True:
+    #sorteia um numero para caso seja igual a pessoa recebe uma carta especial
     idUser = random.randint(1, 3)
     specialLatter = random.randint(1, 3)
+    #set da varivel para reiniciar o jogo
     game = 0
     printTitle("Super Trunfo Arremesso de peso")
     text("bem vindo ao nosso jogo muito legal")
@@ -52,12 +54,13 @@ while True:
     playerCards = []
     #Cartas da maquina
     machineCards = []
+    #aleatorizando as cartas
     random.shuffle(cards)
     #Escolha carta do jogador
     for i in range(2):
         chooseLetter = input(f"Escolha um número de 1 a {len(cards)}: ")
         lenCartas = str(len(cards))
-        
+        #caso o usuario insira algo errado
         while chooseLetter != "1" and chooseLetter != "2" and chooseLetter != "3" and chooseLetter != "4" and chooseLetter != lenCartas:
             text("Digite um número valido")
             chooseLetter = input(f"Escolha um número de 1 a {len(cards)}: ")
@@ -66,7 +69,7 @@ while True:
         chooseLetter -= 1
 
         playerCard = cards[chooseLetter]
-
+        #verificando qual carta é
         if playerCard == "Andre":
             cards.remove("Andre")
             chosenCard = athlete("André", "M", 910 , 15.7, 510, 800)
@@ -124,22 +127,23 @@ while True:
             machineCards.insert(1, chosenCard)
 
     toLoad("Carregando cartas da maquina", ".", 4)
-
+    #pegunta do nome
     name = input('Qual é seu nome\nR:')
     name = name.upper()
+    #caso o usuário seja especial ele recebe a carta especial
     if idUser == specialLatter or name == 'CAMILA':
         var = True
         playerCards[0].setSpecialCard(var,playerCards)
 
     #Mostrar para o jogador as cards
     print("As suas cartas são:")
-    playerCards[0].exibirInformacoes()
-    playerCards[1].exibirInformacoes()
-
+    playerCards[0].displayInformation()
+    playerCards[1].displayInformation()
+    #set da lista atributos para manipulação da maquina
     attributes = ["forca", "fisico", "melhorLancamento", "tecnica"]
-
+    
     text("Escolha qual Atributo você deseja comparar as informações da sua carta")
-    playerCards[0].exibirInformacoes()
+    playerCards[0].displayInformation()
     chooseAttribute = input("[1]Força\n[2]Fisíco\n[3]Melhor Lançamento\n[4]Técnica\nR: ")
 
     while chooseAttribute != "1" and chooseAttribute != "2" and chooseAttribute != "3" and chooseAttribute != "4" and chooseAttribute != len(attributes):
@@ -149,32 +153,34 @@ while True:
     chooseAttribute = int(chooseAttribute)
     chooseAttribute -= 1
 
-
+    #manter a batalha de cartas
     while True:
+        #caso o jogador ganhe, parar o código
         if len(playerCards) == 4:
             text("Você ganhou! Parabéns")
             game += 1
             break
-        
+        #caso a maquina ganhe, parar o código
         if len(machineCards) == 4:
             text("GAME OVER!")
             game += 1
             break
-        
+        #comparando as cartas
         comparsion(playerCards[0], machineCards[0])
+        #verificando qual o ganhador, usuário ou maquina
         winner = playerCards[0].defineWinner()
-
+        #ganhador usuário
         if winner == 0:
             print("Parabéns você ganhou uma carta")
             playerCards.insert(2, machineCards[0])
-            machineCards[0].exibirInformacoes()
+            machineCards[0].displayInformation()
             machineCards.pop(0)
             if len(playerCards) == 4:
                 text("Você ganhou! Parabéns")
                 game += 1
                 break
             text("Escolha qual Atributo você deseja comparar as informações da sua carta")
-            playerCards[0].exibirInformacoes()
+            playerCards[0].displayInformation()
             chooseAttribute = input("[1]Força\n[2]Fisíco\n[3]Melhor Lançamento\n[4]Técnica\nR: ")
 
             while chooseAttribute != "1" and chooseAttribute != "2" and chooseAttribute != "3" and chooseAttribute != "4" and chooseAttribute != len(attributes):
@@ -183,11 +189,11 @@ while True:
 
             chooseAttribute = int(chooseAttribute)
             chooseAttribute -= 1
-            
+        #ganhador maquina
         elif winner == 1:
             print("Você perdeu a competição")
             print("Diga adeus a sua carta")
-            playerCards[0].exibirInformacoes()
+            playerCards[0].displayInformation()
             chooseAttribute = random.randint(1, len(attributes))
             chooseAttribute -= 1
             machineCards.insert(2, playerCards[0])
@@ -199,7 +205,7 @@ while True:
             time.sleep(3)
             print("Maquina esta jogando espere...")
             time.sleep(2)
-    
+    #exibir opção de reiniciar o jogo
     if game == 1:
         text("Deseja jogar novamente?")
         resume = input("[1]Sim\n[2]Não\nR: ")
