@@ -22,14 +22,22 @@ class athlete:
         self.techniqueAthlete = technique
 
     def definirGanhador(self):
+        
         #Dica de como fazer ai em baixo, n esqueça de utilizar o self.
 
-        print(" ") # igonra esse print, é só para n dar erro
-        # if self.comparison > self.comparison1:
-        #     print(f"{self.printAttributos} {self.athleteName} é maior que carta {self.anotherLetter.athleteName}")
-        # else:
-        #     print(f"{self.printAttributos} {self.anotherLetter.athleteName} é maior que da carta {self.athleteName}")
+        # print(" ") # igonra esse print, é só para n dar erro
+        if self.comparison > self.comparison1:
+            text(f"{self.printAttributos} {self.athleteName} é maior que carta {self.anotherLetter.athleteName}")
+            ganhador = 0
+        else:
+            text(f"{self.printAttributos} {self.anotherLetter.athleteName} é maior que da carta {self.athleteName}")
+            ganhador = 1
 
+
+        return(
+            ganhador
+        )
+    
     def compararCartas(self, anotherLetter, comparison, printAttributos):
         self.comparison1 = " "
         self.comparsion = comparison
@@ -49,7 +57,10 @@ class athlete:
             self.comparison = self.techniqueAthlete
             self.comparison1 = anotherLetter.techniqueAthlete
 
-        self.definirGanhador()
+        
+
+    def exibirInformacoes(self):
+        text(f"{self.athleteName} {self.athleteSex} {self.strengthAthlete} {self.bestBid} {self.physicist} {self.techniqueAthlete}")
         
         
 
