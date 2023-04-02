@@ -14,6 +14,7 @@ def invalid ():
              
 class athlete:
     def __init__(self,name,sex,strength,bestBid,physicit,technique):
+
         self.athleteName = name
         self.athleteSex = sex
         self.strengthAthlete = strength
@@ -22,23 +23,19 @@ class athlete:
         self.techniqueAthlete = technique
 
     def definirGanhador(self):
-        
-        #Dica de como fazer ai em baixo, n esqueça de utilizar o self.
 
-        # print(" ") # igonra esse print, é só para n dar erro
         if self.comparison > self.comparison1:
             text(f"{self.printAttributos} {self.athleteName} é maior que carta {self.anotherLetter.athleteName}")
             ganhador = 0
         else:
             text(f"{self.printAttributos} {self.anotherLetter.athleteName} é maior que da carta {self.athleteName}")
             ganhador = 1
-
-
         return(
             ganhador
         )
     
     def compararCartas(self, anotherLetter, comparison, printAttributos):
+
         self.comparison1 = " "
         self.comparsion = comparison
         self.printAttributos = printAttributos
@@ -57,11 +54,15 @@ class athlete:
             self.comparison = self.techniqueAthlete
             self.comparison1 = anotherLetter.techniqueAthlete
 
-        
-
     def exibirInformacoes(self):
-        text(f"{self.athleteName} {self.athleteSex} {self.strengthAthlete} {self.physicist} {self.bestBid} {self.techniqueAthlete}")
-        
-        
 
-        
+        text(f"{self.athleteName} {self.athleteSex} {self.strengthAthlete} {self.physicist} {self.bestBid} {self.techniqueAthlete}")
+
+    def definirCartaExpecial(self,var,cartasDoJogador):
+
+        if var == True:
+            
+            text('Você tem uma carta ultra espercial')
+            cartasDoJogador.pop(0)
+            cartaEspecial = athlete('@$$$$@', '#', 999, 99.99, 999, 999)
+            cartasDoJogador.insert(0,cartaEspecial)

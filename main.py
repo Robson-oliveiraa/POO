@@ -40,6 +40,8 @@ def comparacao(primeiraCarta, segundaCarta):
         primeiraCarta.compararCartas(segundaCarta, "tecnica", "a")
         
 while True:
+    idUser = random.randint(1, 3)
+    cartaEspecial = random.randint(1, 3)
     jogo = 0
     printTitle("Super Trunfo Arremesso de peso")
     print("bem vindo ao nosso jogo muito legal")
@@ -122,6 +124,12 @@ while True:
 
     carregar("Carregando cartas da maquina", ".", 4)
 
+    nome = input('Qual é seu nome\nR:')
+    nome.upper()
+    if idUser == cartaEspecial and nome == 'CAMILA':
+        var = True
+        cartasDoJogador[0].definirCartaExpecial(var,cartasDoJogador)
+
     #Mostrar para o jogador as cartas
     print("As suas cartas são:")
     cartasDoJogador[0].exibirInformacoes()
@@ -200,6 +208,3 @@ while True:
         elif resume == "2":
             carregar("Ok Desligando", ".", 4)
             quit()
-
-    
-    
