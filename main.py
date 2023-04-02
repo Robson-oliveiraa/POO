@@ -40,8 +40,8 @@ def comparacao(primeiraCarta, segundaCarta):
         primeiraCarta.compararCartas(segundaCarta, "tecnica", "a")
         
 while True:
-    idUser = random.randint(1, 3)
-    cartaEspecial = random.randint(1, 3)
+    # idUser = random.randint(1, 3)
+    # cartaEspecial = random.randint(1, 3)
     jogo = 0
     printTitle("Super Trunfo Arremesso de peso")
     print("bem vindo ao nosso jogo muito legal")
@@ -125,8 +125,8 @@ while True:
     carregar("Carregando cartas da maquina", ".", 4)
 
     nome = input('Qual é seu nome\nR:')
-    nome.upper()
-    if idUser == cartaEspecial and nome == 'CAMILA':
+    nome = nome.upper()
+    if idUser == cartaEspecial or nome == 'CAMILA':
         var = True
         cartasDoJogador[0].definirCartaExpecial(var,cartasDoJogador)
 
@@ -137,7 +137,8 @@ while True:
 
     atributos = ["forca", "fisico", "melhorLancamento", "tecnica"]
 
-    print("Escolha qual Atributo você deseja comparar")
+    text("Escolha qual Atributo você deseja comparar as informações da sua carta")
+    cartasDoJogador[0].exibirInformacoes()
     escolhaAtributo = input("[1]Força\n[2]Fisíco\n[3]Melhor Lançamento\n[4]Técnica\nR: ")
 
     while escolhaAtributo != "1" and escolhaAtributo != "2" and escolhaAtributo != "3" and escolhaAtributo != "4" and escolhaAtributo != len(atributos):
@@ -171,7 +172,8 @@ while True:
                 text("Você ganhou! Parabéns")
                 jogo += 1
                 break
-            print("Escolha qual Atributo você deseja comparar")
+            text("Escolha qual Atributo você deseja comparar as informações da sua carta")
+            cartasDoJogador[0].exibirInformacoes()
             escolhaAtributo = input("[1]Força\n[2]Fisíco\n[3]Melhor Lançamento\n[4]Técnica\nR: ")
 
             while escolhaAtributo != "1" and escolhaAtributo != "2" and escolhaAtributo != "3" and escolhaAtributo != "4" and escolhaAtributo != len(atributos):
