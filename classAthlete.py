@@ -3,8 +3,7 @@
 # Jefferson Bruno
 # Robson André
 # Wandell Mota
-from tkinter import *
-import os
+
 from printSpecial import text
 #criação da classe         
 class athlete:
@@ -22,9 +21,11 @@ class athlete:
         #verifica se a primeira carta comparada a segunda é maior ou menos
         if self.comparison > self.comparison1:
             text(f"{self.printAttributos} {self.athleteName} é maior que carta {self.anotherLetter.athleteName}")
+            text("Você ganhou a batalha")
             winner = 0
         else:
             text(f"{self.printAttributos} {self.anotherLetter.athleteName} é maior que da carta {self.athleteName}")
+            text("Você perdeu a batalha")
             winner = 1
         return(
             #retorana quem ganha
@@ -53,12 +54,12 @@ class athlete:
             self.comparison1 = anotherLetter.techniqueAthlete
     #exibindo carta
     def displayInformation(self):
-        text(f"{self.athleteName} {self.athleteSex} {self.strengthAthlete} {self.physicist} {self.bestBid} {self.techniqueAthlete}")
+        text(f"Nome: {self.athleteName} Sexo: {self.athleteSex}\nForça: {self.strengthAthlete} Físico: {self.physicist} Melhor lançamento: {self.bestBid} técnica: {self.techniqueAthlete}")
     #criação de uma carta especial
     def setSpecialCard(self,var,playerCards):
 
         if var == True:
-            text('Você tem uma carta ultra espercial')
+            text('Você tem uma carta ultra especial')
             #retira a primeira carta do jogador
             playerCards.pop(0)
             #set da carta especial

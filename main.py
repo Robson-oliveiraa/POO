@@ -28,16 +28,16 @@ def printTitle(title):
 #Comparar as cards de acordo com os atributos
 def comparsion(firstLetter, secondLetter):
     if chooseAttribute == 0:
-        firstLetter.compareLetter(secondLetter, "forca", "a")
+        firstLetter.compareLetter(secondLetter, "forca", "A força do(a) atleta da carta carta")
         
     elif chooseAttribute == 1:
-        firstLetter.compareLetter(secondLetter, "fisico", "a")
+        firstLetter.compareLetter(secondLetter, "fisico", "O físico do(a) atleta da carta carta")
         
     elif chooseAttribute == 2:
-        firstLetter.compareLetter(secondLetter, "melhorLancamento", "a")
+        firstLetter.compareLetter(secondLetter, "melhorLancamento", "O melhor lançamento do(a) atleta da carta")
         
     elif chooseAttribute == 3:
-        firstLetter.compareLetter(secondLetter, "tecnica", "a")
+        firstLetter.compareLetter(secondLetter, "tecnica", "A técnica do(a) atleta da carta")
 #manter um loop do jogo
 while True:
     #sorteia um numero para caso seja igual a pessoa recebe uma carta especial
